@@ -1,0 +1,12 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "B", "UP", "N", "S", "W"]
+ignore = ["S101"] # allow asserts in tests
+
+[tool.ruff.lint.isort]
+known-first-party = ["astra"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
